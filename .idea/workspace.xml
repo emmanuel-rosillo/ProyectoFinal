@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c74eec2a-9ec0-4aee-8b9d-1e94d68ebdf3" name="Changes" comment="" />
+    <list default="true" id="c74eec2a-9ec0-4aee-8b9d-1e94d68ebdf3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../11 Arboles/Arboles/src/ArbolBinBusq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11 Arboles/Arboles/src/ArbolesB/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11 Arboles/Arboles/src/recorridos/Arbol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11 Arboles/Arboles/src/recorridos/NodoArbol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11 Arboles/Arboles/src/recorridos/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Graph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/main.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/elalocador/Desktop/EDAI2/ProyectoFinal"
+    "last_opened_file_path": "/home/elalocador/Desktop/EDAI2/ProyectoFinal/Finally"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -63,6 +75,7 @@
       <updated>1651105059419</updated>
       <workItem from="1651105060707" duration="5000" />
       <workItem from="1651105606677" duration="12776000" />
+      <workItem from="1651123363944" duration="17000" />
     </task>
     <servers />
   </component>
