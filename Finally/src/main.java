@@ -8,14 +8,17 @@ public class main {
         Nodo n5 = new Nodo(12);
         Nodo n6 = new Nodo(5);
 
-        ArbolBinBusq a1 = new ArbolBinBusq(root);
+        ArbolAVL a1 = new ArbolAVL(root);
 
         a1.buildTree(n1);
         a1.buildTree(n2);
         a1.buildTree(n3);
         a1.buildTree(n4);
-        a1.buildTree(n5);
-        a1.buildTree(n6);
+//        a1.buildTree(n5);
+//        a1.buildTree(n6);
+//        a1.checkHeight(n5);
+//        a1.breadthFrist();
+
 
 
     }

@@ -27,6 +27,7 @@ public class ArbolBin {
     }
 
     public void breadthFrist() {
+        System.out.println("\nImprimiendo arbol...\n");
         Nodo r = root;
         Queue<Nodo> queue = new LinkedList();
         if (r != null) {
@@ -88,7 +89,6 @@ public class ArbolBin {
         } else {
             delete.valor = null;
             temp.valor = null;
-
         }
     }
 }
