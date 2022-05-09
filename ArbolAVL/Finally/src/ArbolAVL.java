@@ -346,4 +346,8 @@ public class ArbolAVL extends ArbolBin {
         super.breadthFrist();
     }
 
+    @Override
+    public boolean inTree(Nodo search) {
+        return super.inTree(search);
+    }
 }
