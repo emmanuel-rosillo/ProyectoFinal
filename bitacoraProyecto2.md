@@ -27,7 +27,7 @@ Evidentemente respetando su jerarquía de operaciones.
 Además, me di cuenta que los números funcionan más como hojas o hijos, y que los operadores fungen más como nodos padre:
 
 <figure>
-    <img src="arbolEjemplo.jpg"
+    <img src="arbolDeExpresiones/arbolEjemplo.jpg"
          alt="árbol de ejemplo">
     <figcaption>Árbol de expresiones aritméticas "1+2*3-4/5"</figcaption>
 </figure>
@@ -43,7 +43,7 @@ Minutos dedicados al proyecto: 150 minutos.
 Ahora, en este día me dedico a imaginar cómo voy a construir el programa, así que tomo lápiz y papel y empiezo a dibujar lo siguiente:
 
 <figure>
-    <img src="bocetoUno.jpg"
+    <img src="arbolDeExpresiones/bocetoUno.jpg"
          alt="Boceto 1">
     <figcaption><i>Boceto 1: Asignación de operadores a los nodos</i></figcaption>
 </figure>
@@ -51,7 +51,7 @@ Ahora, en este día me dedico a imaginar cómo voy a construir el programa, así
 <br>
 
 <figure>
-    <img src="bocetoDos.jpg"
+    <img src="arbolDeExpresiones/bocetoDos.jpg"
          alt="Boceto 2">
     <figcaption><i>Boceto 2: Una idea de cómo dividir el String</i></figcaption>
 </figure>
@@ -79,7 +79,7 @@ public class Proyecto2 {
 ```
 
 <figure>
-    <img src="ejecucionUno.jpg"
+    <img src="arbolDeExpresiones/ejecucionUno.jpg"
          alt="Ejecucion 1">
 </figure>
 
@@ -94,7 +94,7 @@ Minutos dedicados al proyecto: 200 minutos.
 Cuando decidí agregar los operadores en un array, me di cuenta de que me agregaba un dato, por decirlo de alguna forma, nulo, ya que no me arroja ningun dato en sí (además, al no agregar ciertas especificaciones, los separadores se vuelven inservibles o en mi contra):
 
 <figure>
-    <img src="primerError.jpg"
+    <img src="arbolDeExpresiones/primerError.jpg"
          alt="Error 1">
 </figure>
 
@@ -105,7 +105,7 @@ El primer paso fue crear dos métodos: *separadorDeOperadores* ( método de tipo
 Con lo anteriormente dicho, logro conseguir la siguiente  ejecución satisfactoria:
 
 <figure>
-    <img src="ejecucion2.jpg"
+    <img src="arbolDeExpresiones/ejecucion2.jpg"
          alt="Ejecución 2">   
 </figure>
 
@@ -122,7 +122,7 @@ Minutos dedicados al proyecto: 100 minutos.
 El "pseudo-código" que hice estaba bastante desordenado y mal hecho, así que decidí acomodarlo un poco, además de enumerar los pasos de mis pensamientos para un mayor orden. Así luce mi bosquejo para almacenar los nodos de los operadores:
 
 <figure>
-    <img src="bocetoTres.jpg"
+    <img src="arbolDeExpresiones/bocetoTres.jpg"
          alt="Boceto 3">
     <figcaption><i>Boceto 3: Una idea de cómo guardar los nodos "padres" en la lista de nodos.</i></figcaption>
 </figure>
@@ -156,7 +156,7 @@ public void NodosDeOperadores(int index, int resta, String[] limite, int contado
 ```
 
 <figure>
-    <img src="ejecucion3.jpg"
+    <img src="arbolDeExpresiones/ejecucion3.jpg"
          alt="Ejecución 3">   
 </figure>
 
