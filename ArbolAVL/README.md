@@ -39,10 +39,10 @@ public void checkBalance(Nodo hijo) {
 en la clase anterior, se puede encontrar la clase controladora de las alturas expicada a detalle en el video.
 
 ## balanceo
-### explicación del funcionamiento de la clase $\downarrow$
+### explicación del funcionamiento de la clase :point_down:
 
 
-[![ScreenShot](images/Screenshot%20from%202022-05-09%2001-05-13.png)](https://youfiles.herokuapp.com/videodictionary/?m=Video_Player_Drive&state=%7B%22ids%22:%5B%221htEN2Bsm8H8mUxb2plqEXOTX84tzNRaI%22%5D,%22action%22:%22open%22,%22resourceKeys%22:%7B%7D%7D)
+[![ScreenShot](images/Screenshot%20from%202022-05-09%2001-05-13.png)](https://drive.google.com/file/d/1htEN2Bsm8H8mUxb2plqEXOTX84tzNRaI/view?usp=sharing)
 
 seguimos el esquema explicado en el video sobre los cuatro tipos de rotaciones para su balanceo:
 
