@@ -41,7 +41,6 @@ public class ArbolAVL extends ArbolBin {
             this.temp = root.der;
         }
     }
-
     //construye el arbol
     public synchronized void buildTree(Nodo hijo) {
         Deque<Nodo> deque = new LinkedList<>();
@@ -86,7 +85,6 @@ public class ArbolAVL extends ArbolBin {
             }
         }
     }
-
     public void checkBalance(Nodo hijo) {
         Deque <Nodo> unbalance = new LinkedList<>();
         while (true) {
@@ -194,7 +192,6 @@ public class ArbolAVL extends ArbolBin {
             }
         }
     }
-
     public LinkedList<Integer> checkHeight(Nodo check) {
         LinkedList<Integer> heights = new LinkedList<>();
         LinkedList<Nodo> op = new LinkedList<>();
@@ -343,8 +340,10 @@ public class ArbolAVL extends ArbolBin {
         heights.add(heightRight);
         return heights;
     }
+
     @Override
     public void breadthFrist() {
         super.breadthFrist();
     }
+
 }
