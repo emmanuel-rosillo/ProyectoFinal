@@ -33,8 +33,8 @@ public class main {
             Boolean frue = false;// validar si la raiz fue insertada op "1"
             ArbolAVL a1 = null;
             switch (op) {
-                //insertar raiz
                 case 1:
+                    //insertar raiz
                     if(frue == true){
                         System.err.println("no es posible insertar nuevamente una raiz");
                         break;
