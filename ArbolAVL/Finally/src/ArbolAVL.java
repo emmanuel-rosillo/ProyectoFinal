@@ -309,6 +309,9 @@ public class ArbolAVL extends ArbolBin {
         heights.add(heightRight);
         return heights;
     }
+    public void setRoot(Nodo root) {
+        this.root = root;
+    }
     @Override
     public void breadthFrist() {
         super.breadthFrist();
