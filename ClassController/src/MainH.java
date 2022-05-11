@@ -34,26 +34,7 @@ public class MainH {
                     Integer n = n1.nextInt();
                     h.insert(n);
                     System.out.println("se inserto un nodo\n");
-                    System.out.println("¿Desea insertar otro? x-exit");
-                    Key codes = null;
-                    addKeyListener(new KeyListener() {
-                        @Override
-                        public void keyTyped(KeyEvent e) {
-                            int code = e.getKeyCode();
-                            codes.setCode(code);
-                        }
-
-                        @Override
-                        public void keyPressed(KeyEvent e) {
-                        }
-
-                        @Override
-                        public void keyReleased(KeyEvent e) {
-                        }
-                    });
-                    if (codes.code == 88){
-                        break;
-                    }
+                    break;
                 case 2:
                     System.out.println("¿que nodo desea eliminar: ");
                     Integer e = n1.nextInt();

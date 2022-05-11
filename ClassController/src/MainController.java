@@ -3,12 +3,11 @@ import java.util.Scanner;
 
 public class MainController {
     public static void main(String[] args) throws IOException {
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Selecciona tu tipo de arbol: \n");
         System.out.println("1.- Heap\n");
         System.out.println("2.- ArbolAVL\n");
-        System.out.println("3.- ArbolAritmetico");
+        System.out.println("3.- ArbolAritmetico\n");
         System.out.println("4.- salir");
         Integer op = sc.nextInt();
         while (true){

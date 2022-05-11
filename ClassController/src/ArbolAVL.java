@@ -77,11 +77,11 @@ public class ArbolAVL extends ArbolBinAVL {
                 NodoAVL y = unbalance.pollLast();
                 NodoAVL x = unbalance.pollLast();
                 System.out.println("\n");
-                System.out.println("Raiz: " + z.valor + " hijo: " + y.valor + " daño: " + x.valor);
+                System.out.println("entro en el nodo: " + z.valor + " siguio por el nodo: " + y.valor + " la insercion que desvalenceo el arbol: " + x.valor);
                 System.out.println("\n");
                 balance(x, y, z);
             }
-            System.out.println("valor nodo: " + hijo.valor + " Izq: " + izq + " der: " + der);
+            System.out.println("valor del nodo que se reviso la altura: " + hijo.valor + " su altura izquierda: " + izq + " su altura derecha: " + der);
             hijo = hijo.padre;
         }
     }

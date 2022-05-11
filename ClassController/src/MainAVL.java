@@ -19,18 +19,19 @@ public class MainAVL {
 //        a1.buildTree(n6);
 //        a1.breadthFrist();
     public void init() {
+        Scanner n1 = new Scanner(System.in); // objeto de lectura por teclado
+        System.out.println("es necesario plantar un arbol primero, escriba una raiz:\n");
+        Integer root = n1.nextInt();
+        NodoAVL rt = new NodoAVL(root);
+        ArbolAVL a1 = new ArbolAVL(rt);
         // se ejecuta el menu, hasta que se ingrese la opcion 5
         while (true) {
             //menu de las opciones para el usuario
-            Scanner n1 = new Scanner(System.in); // objeto de lectura por teclado
-            System.out.println("es necesario plantar un arbol primero, escriba una raiz:\n");
-            Integer root = n1.nextInt();
-            NodoAVL rt = new NodoAVL(root);
-            ArbolAVL a1 = new ArbolAVL(rt);
             System.out.println("Seleccione una opción: \n");
-            System.out.println("2.- inserta ABONO (añadir nodo)\n");
-            System.out.println("3.- Cortar parte del arbol (borrar nodo)\n");
-            System.out.println("4.- buscar valor en el arbol");
+            System.out.println("1.- inserta ABONO (añadir nodo)\n");
+            System.out.println("2.- Cortar parte del arbol (borrar nodo)\n");
+            System.out.println("3.- buscar valor en el arbol\n");
+            System.out.println("4.- salir\n");
             Integer op = n1.nextInt(); // opcion elegida
             switch (op) {
                 case 1:
@@ -68,6 +69,7 @@ public class MainAVL {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 } finally {
+                    System.out.println("¡Adios!");
                     break;
                 }
             }
