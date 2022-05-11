@@ -4,7 +4,7 @@ import java.util.Scanner;
 import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
 
 public class MainH {
-    public void init(){
+    public static void init(){
 //        Heap maxHeap = new Heap(10);
 //        maxHeap.insert(1);
 //        maxHeap.insert(2);
