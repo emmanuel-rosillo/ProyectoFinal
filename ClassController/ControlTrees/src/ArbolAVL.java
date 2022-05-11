@@ -1,28 +1,28 @@
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class ArbolAVL extends ArbolBin {
-    Nodo root;
-    Nodo temp;
+public class ArbolAVL extends ArbolBinAVL {
+    NodoAVL root;
+    NodoAVL temp;
     LinkedList<Integer> rec = new LinkedList();
 
     public ArbolAVL() {
     }
 
-    public ArbolAVL(Nodo root, Nodo temp) {
+    public ArbolAVL(NodoAVL root, NodoAVL temp) {
         this.root = root;
         this.temp = temp;
     }
 
-    public ArbolAVL(Nodo root) {
+    public ArbolAVL(NodoAVL root) {
         super(root);
         this.root = root;
     }
     //construye el arbol
-    public synchronized void buildTree(Nodo hijo) {
-        Deque<Nodo> deque = new LinkedList<>();
+    public synchronized void buildTree(NodoAVL hijo) {
+        Deque<NodoAVL> deque = new LinkedList<>();
         deque.add(root);
-        Nodo temp = root;
+        NodoAVL temp = root;
         //enter to assignment for the node
         while (true) {
             Integer recorridos = 0;
@@ -58,8 +58,8 @@ public class ArbolAVL extends ArbolBin {
             }
         }
     }
-    public void checkBalance(Nodo hijo) {
-        Deque <Nodo> unbalance = new LinkedList<>();
+    public void checkBalance(NodoAVL hijo) {
+        Deque <NodoAVL> unbalance = new LinkedList<>();
         while (true) {
             unbalance.add(hijo);
             LinkedList<Integer> ch;
@@ -73,9 +73,9 @@ public class ArbolAVL extends ArbolBin {
             Integer der = ch.get(1);
             Integer total = izq - der;
             if ((total < -1)||(total > 1)){
-                Nodo z = unbalance.pollLast();
-                Nodo y = unbalance.pollLast();
-                Nodo x = unbalance.pollLast();
+                NodoAVL z = unbalance.pollLast();
+                NodoAVL y = unbalance.pollLast();
+                NodoAVL x = unbalance.pollLast();
                 System.out.println("\n");
                 System.out.println("Raiz: " + z.valor + " hijo: " + y.valor + " daño: " + x.valor);
                 System.out.println("\n");
@@ -85,10 +85,10 @@ public class ArbolAVL extends ArbolBin {
             hijo = hijo.padre;
         }
     }
-    public void balance(Nodo x, Nodo y, Nodo z) {
+    public void balance(NodoAVL x, NodoAVL y, NodoAVL z) {
         int rec1 = rec.pollLast();
         int rec2 = rec.pollLast();
-        Nodo temp = null;
+        NodoAVL temp = null;
         Integer temp2;
         switch (rec2) {
             case 0: {
@@ -141,12 +141,12 @@ public class ArbolAVL extends ArbolBin {
             }
         }
     }
-    public void checkNode(Nodo x, Nodo y, Nodo z) {
-        LinkedList<Nodo> deque = new LinkedList<>();
+    public void checkNode(NodoAVL x, NodoAVL y, NodoAVL z) {
+        LinkedList<NodoAVL> deque = new LinkedList<>();
         deque.add(y);
         deque.add(x);
-        Nodo n = null;
-        Nodo m = null;
+        NodoAVL n = null;
+        NodoAVL m = null;
         for (int i = 0; i < deque.size(); i++) {
             n = deque.get(i);
             for (int j = 0; j < deque.size(); j++) {
@@ -162,12 +162,12 @@ public class ArbolAVL extends ArbolBin {
             }
         }
     }
-    public LinkedList<Integer> checkHeight(Nodo check) {
+    public LinkedList<Integer> checkHeight(NodoAVL check) {
         LinkedList<Integer> heights = new LinkedList<>();
-        LinkedList<Nodo> op = new LinkedList<>();
+        LinkedList<NodoAVL> op = new LinkedList<>();
         Integer heightLeft = 0;
         Integer heightRight = 0;
-        Nodo temp;
+        NodoAVL temp;
         temp = check;
         Integer i = 0;
         while (check.pasos != 2) {
@@ -249,18 +249,18 @@ public class ArbolAVL extends ArbolBin {
                 }
             }
         }
-        for (Nodo n : op) {
+        for (NodoAVL n : op) {
             n.setPasos(0);
         }
         heights.add(heightLeft);
         heights.add(heightRight);
         return heights;
     }
-    public LinkedList<Integer> chekRight(Nodo check) {
+    public LinkedList<Integer> chekRight(NodoAVL check) {
         LinkedList<Integer> heights = new LinkedList<>();
-        LinkedList<Nodo> op = new LinkedList<>();
+        LinkedList<NodoAVL> op = new LinkedList<>();
         Integer heightRight = 0;
-        Nodo temp;
+        NodoAVL temp;
         temp = check;
         Integer i = 0;
         op.add(temp);
@@ -302,14 +302,14 @@ public class ArbolAVL extends ArbolBin {
                 break;
             }
         }
-        for (Nodo n : op) {
+        for (NodoAVL n : op) {
             n.setPasos(0);
         }
         heights.add(0);
         heights.add(heightRight);
         return heights;
     }
-    public void setRoot(Nodo root) {
+    public void setRoot(NodoAVL root) {
         this.root = root;
     }
     @Override
@@ -317,11 +317,11 @@ public class ArbolAVL extends ArbolBin {
         super.breadthFrist();
     }
     @Override
-    public boolean inTree(Nodo search) {
+    public boolean inTree(NodoAVL search) {
         return super.inTree(search);
     }
     @Override
-    public void deleteKey(Nodo delete) {
+    public void deleteKey(NodoAVL delete) {
         super.deleteKey(delete);
     }
 }

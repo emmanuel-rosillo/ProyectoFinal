@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class mainAVL {
-    public static void main(String[] args) {
+
 //        Nodo root = new Nodo(7);
 //        Nodo n1 = new Nodo(9);
 //        Nodo n2 = new Nodo(8);
@@ -20,13 +20,14 @@ public class mainAVL {
 //        a1.buildTree(n6);
 //        a1.breadthFrist();
 
-        // se ejecuta el menu, hasta que se ingrese la opcion 5
+    // se ejecuta el menu, hasta que se ingrese la opcion 5
+    public void menu(){
         while (true) {
             //menu de las opciones para el usuario
             Scanner n1 = new Scanner(System.in); // objeto de lectura por teclado
             System.out.println("es necesario plantar un arbol primero\n");
             Integer root = n1.nextInt();
-            Nodo rt = new Nodo(root);
+            NodoAVL rt = new NodoAVL(root);
             ArbolAVL a1 = new ArbolAVL(rt);
             Boolean frue = true;           // validar si la raiz fue insertada op "1"
             System.out.println("Seleccione una opción: \n");
@@ -39,21 +40,21 @@ public class mainAVL {
                     //añadir nodos al arbol
                     System.out.println("Ingresa el nodo: ");
                     Integer y = n1.nextInt();
-                    Nodo n = new Nodo(y);
+                    NodoAVL n = new NodoAVL(y);
                     a1.buildTree(n);
                     break;
                 case 2:
                     // borrar nodo
                     System.out.println("ingresa a quien matamos:");
                     Integer z = n1.nextInt();
-                    Nodo d = new Nodo(z);
+                    NodoAVL d = new NodoAVL(z);
                     a1.deleteKey(d);
                     break;
                 case 3:
                     // buscar nodo
                     System.out.println("diganme ¿a quien localizamos?: ");
                     Integer h = n1.nextInt();
-                    Nodo l = new Nodo(h);
+                    NodoAVL l = new NodoAVL(h);
                     Boolean tr = a1.inTree(l);
                     if (tr == true){
                         System.out.println("Ya lo encontramos vivo");

@@ -1,27 +1,27 @@
-public class Nodo {
+public class NodoAVL {
     Integer valor;
-    Nodo izq = null;
-    Nodo der = null;
-    Nodo padre = null;
+    NodoAVL izq = null;
+    NodoAVL der = null;
+    NodoAVL padre = null;
     Integer pasos = 0;
 
-    public Nodo(){
+    public NodoAVL(){
         izq=der=null;
     }
-    public Nodo(int data){
+    public NodoAVL(int data){
         this(data,null,null);
     }
-    public Nodo(int data, Nodo lt, Nodo rt){
+    public NodoAVL(int data, NodoAVL lt, NodoAVL rt){
         valor=data;
         izq = lt;
         der = rt;
     }
     
-    public void setIzq(Nodo izq) {
+    public void setIzq(NodoAVL izq) {
         this.izq = izq;
     }
     
-    public void setDer(Nodo der) {
+    public void setDer(NodoAVL der) {
         this.der = der;
     }
 
@@ -36,7 +36,7 @@ public class Nodo {
         this.der = null;
     }
 
-    public void setPadre(Nodo padre) {
+    public void setPadre(NodoAVL padre) {
         this.padre = padre;
     }
     public void setOne(){
