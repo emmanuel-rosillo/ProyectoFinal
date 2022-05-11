@@ -4,16 +4,7 @@ import java.util.LinkedList;
 public class ArbolAVL extends ArbolBin {
     Nodo root;
     Nodo temp;
-
-    Integer h = 0;
-
-    Integer hR = 0;
-
-    Integer hL = 0;
-    Integer izq = 0;
-    Integer der = 0;
     LinkedList<Integer> rec = new LinkedList();
-    LinkedList<Nodo> rec2 = new LinkedList();
 
     public ArbolAVL() {
     }
@@ -23,33 +14,15 @@ public class ArbolAVL extends ArbolBin {
         this.temp = temp;
     }
 
-
     public ArbolAVL(Nodo root) {
         super(root);
         this.root = root;
-    }
-
-    public void addIn(Nodo padre, Nodo hijo, int lado) {
-        Nodo temp = null;
-        if (root.izq != null) {
-            root.setIzq(root.izq);
-        }
-        if (temp != null) {
-            root.setDer(temp);
-        }
-        if (root.der != null) {
-            this.temp = root.der;
-        }
     }
     //construye el arbol
     public synchronized void buildTree(Nodo hijo) {
         Deque<Nodo> deque = new LinkedList<>();
         deque.add(root);
-        Integer i = 1;
         Nodo temp = root;
-        Nodo x;
-        Nodo y;
-        Nodo z;
         //enter to assignment for the node
         while (true) {
             Integer recorridos = 0;
@@ -110,10 +83,8 @@ public class ArbolAVL extends ArbolBin {
             }
             System.out.println("valor nodo: " + hijo.valor + " Izq: " + izq + " der: " + der);
             hijo = hijo.padre;
-
         }
     }
-
     public void balance(Nodo x, Nodo y, Nodo z) {
         int rec1 = rec.pollLast();
         int rec2 = rec.pollLast();
@@ -170,7 +141,6 @@ public class ArbolAVL extends ArbolBin {
             }
         }
     }
-
     public void checkNode(Nodo x, Nodo y, Nodo z) {
         LinkedList<Nodo> deque = new LinkedList<>();
         deque.add(y);
@@ -286,7 +256,6 @@ public class ArbolAVL extends ArbolBin {
         heights.add(heightRight);
         return heights;
     }
-
     public LinkedList<Integer> chekRight(Nodo check) {
         LinkedList<Integer> heights = new LinkedList<>();
         LinkedList<Nodo> op = new LinkedList<>();
@@ -340,14 +309,16 @@ public class ArbolAVL extends ArbolBin {
         heights.add(heightRight);
         return heights;
     }
-
     @Override
     public void breadthFrist() {
         super.breadthFrist();
     }
-
     @Override
     public boolean inTree(Nodo search) {
         return super.inTree(search);
+    }
+    @Override
+    public void deleteKey(Nodo delete) {
+        super.deleteKey(delete);
     }
 }

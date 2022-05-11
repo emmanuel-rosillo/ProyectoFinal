@@ -62,6 +62,7 @@ public class main {
                     Integer z = n1.nextInt();
                     Nodo d = new Nodo(z);
                     a1.deleteKey(d);
+                    break;
                 case 4:
                     // buscar nodo
                     System.out.println("diganme ¿a quien localizamos?: ");
@@ -74,12 +75,13 @@ public class main {
                     else {
                         System.err.println("No encontramos rastros de vida");
                     }
+                    break;
             }
             // finalizar programa
             if (op == 5){
                 System.out.println("Saliendo del programa...");
                 try{
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
